@@ -31,3 +31,4 @@ C:\temp\ws-c#\CadastroProdutoAPI\CadastroProdutoAPI\obj\Debug\net8.0\CadastroPro
 C:\temp\ws-c#\CadastroProdutoAPI\CadastroProdutoAPI\obj\Debug\net8.0\CadastroProdutoAPI.genruntimeconfig.cache
 C:\temp\ws-c#\CadastroProdutoAPI\CadastroProdutoAPI\obj\Debug\net8.0\ref\CadastroProdutoAPI.dll
 C:\temp\ws-c#\CadastroProdutoAPI\CadastroProdutoAPI\bin\Debug\net8.0\BancoDeDadosJson.json
+C:\temp\ws-c#\CadastroProdutoAPI\CadastroProdutoAPI\obj\Debug\net8.0\CadastroProdutoAPI.sourcelink.json

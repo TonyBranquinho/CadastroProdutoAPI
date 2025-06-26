@@ -28,5 +28,17 @@ namespace CadastroProdutoAPI.Servicos
                 Console.WriteLine("Nao encontrei esse ID");
             return null;
         }
+
+        // Metodo para Cadastro de novos produtos
+        public void Cadastrar(ProdutoAPI novoProduto)
+        {
+            lista.Add(novoProduto);
+        }
+
+        // Metodo que verifica item pelo ID
+        public bool VerificaId(int id)
+        {
+            return !lista.Any(u => u.Id == id); // True se NAO existir
+        }
     }
 }
