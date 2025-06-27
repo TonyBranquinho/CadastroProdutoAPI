@@ -22,14 +22,14 @@ namespace CadastroProdutoAPI.Controllers
         }
 
 
-        [HttpGet] // Diz que esse metodo responde a requisiçao GET (sem parametro)
+        [HttpGet] // Diz que esse metodo responde a requisiçao GET - BUSCA
         public ActionResult<List<ProdutoAPI>> GetTodos()
         {
             return _servicoAPI.lista;
         }
 
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}")] // Diz que esse metodo responde a requisiçao GET - BUSCA ID
         public ActionResult<ProdutoAPI> GetPorId(int id)
         {
             var buscaId = _servicoAPI.BuscaProduto(id);
@@ -41,7 +41,7 @@ namespace CadastroProdutoAPI.Controllers
         }
 
 
-        [HttpPost] // Diz que esse metodo responde a requisiçoes POST (para criar recursos)
+        [HttpPost] // Diz que esse metodo responde a requisiçoes POST - CADASTRA
         public ActionResult<ProdutoAPI> Cadastrar([FromBody] ProdutoAPI novoProduto) // Metodo que retona o novo objeto
         {
             int id = novoProduto.Id;
@@ -62,7 +62,7 @@ namespace CadastroProdutoAPI.Controllers
         }
 
 
-        [HttpPut("{id}")] // Atibuto que diz que esse metodo responde a requisiçoes PUT
+        [HttpPut("{id}")] // Atibuto que diz que esse metodo responde a requisiçoes PUT - ATUALIZA
         public ActionResult Atualizar(int id, [FromBody] ProdutoAPI produtoAtualizado)
         {
             var produtoExistente = _servicoAPI.BuscaProduto(id);
@@ -80,7 +80,24 @@ namespace CadastroProdutoAPI.Controllers
             OperacaoBancoDados.Salvar(_servicoAPI.lista);
 
             return NoContent(); // Retorna 204 - indica atualizaçao feita com sucesso
+        }
 
+
+        [HttpDelete("{id}")] // Responde a requisiçao DELETE - REMOVE      
+        public ActionResult Delete(int id) // Metodo para deletar itens
+        {
+            // Verifica se tem esse ID na lista e atribui o retorno a essa nova variavel
+            var produtoDeletar = _servicoAPI.BuscaProduto(id);
+            if (produtoDeletar == null)
+            {
+                return NotFound(id);
+            }
+
+            _servicoAPI.lista.Remove(produtoDeletar); // Deleta o produto da lista
+            
+            OperacaoBancoDados.Salvar(_servicoAPI.lista); // Salva a nova lista JSON
+
+            return NoContent(); // Retorna 204 - Exclusao feita com sucesso
         }
     }
 }
