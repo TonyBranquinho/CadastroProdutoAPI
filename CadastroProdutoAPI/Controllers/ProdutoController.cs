@@ -5,7 +5,7 @@ using CadastroProdutoAPI.Modelos;
 
 namespace CadastroProdutoAPI.Controllers
 {
-    [ApiController] // Diz que essa classe é um controlador de API
+    [ApiController] // Diz que essa classe é um controlador de APIm  
     [Route("[controller]")] // Define o nome da classe como rota 
 
 
@@ -22,14 +22,14 @@ namespace CadastroProdutoAPI.Controllers
         }
 
 
-        [HttpGet] // Diz que esse metodo responde a requisiçao GET - BUSCA
+        [HttpGet] // Diz ao ASP.NET Core que esse metodo responde a requisiçao GET - BUSCA
         public ActionResult<List<ProdutoAPI>> GetTodos()
         {
             return _servicoAPI.lista;
         }
 
 
-        [HttpGet("{id}")] // Diz que esse metodo responde a requisiçao GET - BUSCA ID
+        [HttpGet("{id}")] // Diz ao ASP.NET Core que esse metodo responde a requisiçao GET - BUSCA ID
         public ActionResult<ProdutoAPI> GetPorId(int id)
         {
             var buscaId = _servicoAPI.BuscaProduto(id);
@@ -41,7 +41,7 @@ namespace CadastroProdutoAPI.Controllers
         }
 
 
-        [HttpPost] // Diz que esse metodo responde a requisiçoes POST - CADASTRA
+        [HttpPost] // Diz ao ASP.NET Core que esse metodo responde a requisiçoes POST - CADASTRA
         public ActionResult<ProdutoAPI> Cadastrar([FromBody] ProdutoAPI novoProduto) // Metodo que retona o novo objeto
         {
             int id = novoProduto.Id;
@@ -62,9 +62,10 @@ namespace CadastroProdutoAPI.Controllers
         }
 
 
-        [HttpPut("{id}")] // Atibuto que diz que esse metodo responde a requisiçoes PUT - ATUALIZA
+        [HttpPut("{id}")] // Diz ao ASP.NET Coreque esse metodo responde a requisiçoes PUT - ATUALIZA
         public ActionResult Atualizar(int id, [FromBody] ProdutoAPI produtoAtualizado)
         {
+            // Verifica se tem esse ID na lista e atribui o retorno a essa nova variavel
             var produtoExistente = _servicoAPI.BuscaProduto(id);
             if (produtoExistente == null)
             {
@@ -83,7 +84,7 @@ namespace CadastroProdutoAPI.Controllers
         }
 
 
-        [HttpDelete("{id}")] // Responde a requisiçao DELETE - REMOVE      
+        [HttpDelete("{id}")] // Diz ao ASP.NET Core que esse metodo responde a requisiçao DELETE - REMOVE      
         public ActionResult Delete(int id) // Metodo para deletar itens
         {
             // Verifica se tem esse ID na lista e atribui o retorno a essa nova variavel
