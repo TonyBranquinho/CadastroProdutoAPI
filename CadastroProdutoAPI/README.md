@@ -1,6 +1,6 @@
 ﻿# CadastroProdutoAPI
 
-## API REST em c# com ASP.NET Core para operaçoes de **CRUD** de produtos, com persistencia em JSON.
+## Essa é uma API REST em c# com ASP.NET Core para operaçoes de **CRUD** de produtos, com persistencia em JSON.
 
 ## Tecnologias Utilizadas
 

@@ -1,0 +1,14 @@
+# Build
+bin/
+obj/
+
+# User files
+*.user
+*.suo
+
+# Visual Studio
+.vs/
+
+# Sistema
+*.DS_Store
+Thumbs.db
