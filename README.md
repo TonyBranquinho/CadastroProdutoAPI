@@ -1,7 +1,19 @@
-﻿# CadastroProdutoAPI
+﻿## CadastroProdutoAPI
 
-## Essa é uma API REST em c# com ASP.NET Core para operaçoes de **CRUD** de produtos, com persistencia em JSON.
-
+Essa é uma API RESTful em c#  para gestão de produtos com arquitetura em camadas e com persistência em JSON.
+---
+# Imagens
+1. Tela inicial de execução no Swagger:
+- ![Tela principal](imagens/endPoints.jpg)
+2. Tela da resposta de uma busca pelos produtos cadastrados:
+- ![Tela principal](imagens/getProduto.jpg)
+3. Tela da resposta de uma busca de um produto pelo seu ID:
+- ![Tela principal](imagens/getId.jpg)
+4. Tela de resposta do tratamento de busca com ID inexistente:
+- ![Tela principal](imagens/tratamentoId.jpg)
+6. Diagrama de arquitetura do projeto: Cliente → Controllers → Servicos → Dados → JSON
+- ![Tela principal](imagens/arquitetura.jpg)
+---
 ## Tecnologias Utilizadas
 
 **C#**
