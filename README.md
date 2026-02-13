@@ -16,29 +16,19 @@ Essa é uma API RESTful em c#  para gestão de produtos com arquitetura em camad
 ---
 ## Tecnologias Utilizadas
 
-**C#**
-**ASP.NET Core**
-**Controllers**
-**Swagger**
-**Persistencia em JSON**
+- **C#**
+- **.NET 8/ ASP.NET Core**
+- **JSON**
+- **Swagger / OpenAPI**.
+---
 
 ## Funcionalidades
 
-**GET /produto**
-Retorna todos os produtos cadastrados
-
-**GET /produto/{id}**
-Retorna o produto pelo ID
-
-**POST /produto**
-Cadastra um novo produto
-
-**PUT /produto/{id}**
-Atualiza um produto existente
-
-**DELETE /produto/{id}**
-Deleta um produto
-
+- **Listagem de produtos**.
+- **Cadastro de Produtos**.
+- **Busca de Produto por ID**.
+- **Atualização de Produto por ID**.
+- **Remoção de Produtos por ID**.
 
 ## Estrutura do Projeto
 
@@ -59,6 +49,16 @@ CadastroProdutoAPI
 	Program
 
 
+
+### Endpoints
+- `Get /produto` - Lista todos os produtos.
+- `Get /produto/{id}` - Busca produto por ID. 
+- `POST /produto` - Cadastra novo produto. 
+- `PUT /produto/{id}` - Atualiza produto por ID. 
+- `DELETE /produto/{id}` - Remove produto por ID. 
+
+
+
 ## Como executar
 
 1. Clone o repositorio:
@@ -71,7 +71,7 @@ CadastroProdutoAPI
 dotnet run
 
 4. Acesse o Swagger:
-https://localhost:7241/swagger/index.html (acho que so vai funcionar no meu pc)
+https://localhost:7241/swagger/index.html
 
 
 ## Conceitos Utilizados
