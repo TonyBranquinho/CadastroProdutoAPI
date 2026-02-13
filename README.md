@@ -1,4 +1,8 @@
-﻿## CadastroProdutoAPI
+[![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?style=flat&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com)
+[![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=c-sharp&logoColor=white)](https://learn.microsoft.com/dotnet/csharp/)
+[![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-5C2D91?style=flat&logo=.net&logoColor=white)](https://dotnet.microsoft.com/apps/aspnet)
+
+# CadastroProdutoAPI
 
 Essa é uma API RESTful em c#  para gestão de produtos com arquitetura em camadas e com persistência em JSON.
 ---
